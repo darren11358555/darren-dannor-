@@ -1,0 +1,134 @@
+/* General reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #410a59;
+    color: #f1f1f1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style for elements that fade in */
+.fade-in {
+    opacity: 0; /* Start as invisible */
+    animation: fadeIn 2s ease forwards; /* Fade in over 2 seconds */
+}
+
+/* Add delay for each element */
+.fade-in:nth-of-type(1) {
+    animation-delay: 0.5s; /* Delay for first text element */
+}
+
+.fade-in:nth-of-type(2) {
+    animation-delay: 1s; /* Delay for second text element */
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #aaa;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+/* Clickable logo style */
+.logo-button {
+    text-decoration: none; /* No underline for clickable logo */
+    color: #f1f1f1;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo-button:hover {
+    color: #00FF00; /* Hover effect for clickable logo */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #f1f1f1;
+}
+
+.portfolio-info {
+    text-align: center;
+    margin-top: 20vh;
+}
+
+.status {
+    margin-bottom: 20px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #00FF00;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 20px;
+    color: #ccc;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: #aaa;
+}

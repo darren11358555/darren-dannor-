@@ -1,0 +1,266 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #69359C;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.header-left h1 {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: antiquewhite;
+    text-transform: uppercase;
+}
+
+.header-right ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.header-right ul li {
+    display: inline-block;
+}
+
+.header-right ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+/* Logo button - new CSS */
+.logo-button {
+    text-decoration: none; /* Remove underline */
+    color: antiquewhite;    /* Maintain color */
+    font-weight: 400;       /* Font weight */
+    text-transform: uppercase; /* Uppercase text */
+    font-size: 1.2em;       /* Font size */
+}
+
+.logo-button:hover {
+    color: #00ff00; /* Optional hover effect */
+}
+
+main {
+    text-align: center;
+    margin-top: 150px;
+    padding: 0 20px;
+    max-width: 1200px;
+}
+
+main h2 {
+    font-size: 4em;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+main .location {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    color: #8e8e8e;
+}
+
+main h4 {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+main h3 {
+    font-size: 1.2em;
+    font-weight: 100;
+    margin-top: 20px;
+    line-height: 1.6em;
+    color: #b0b0b0;
+}
+
+/* Content cards styling */
+.content-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.card {
+    background-color: #2a2a2a;
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    color: white;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.card ul li {
+    margin-bottom: 8px;
+}
+
+.availability {
+    color: #00ff00;
+    font-weight: 700;
+}
+
+.spotify-card .song-info {
+    background-color: #3a3a3a;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.learning-progress {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.progress-bar {
+    background-color: #4a4a4a;
+    border-radius: 5px;
+    width: 100%;
+    height: 8px;
+    margin-top: 5px;
+}
+
+.progress {
+    background-color: #00ff00;
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* Animation for h2 */
+.animate {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 1.5s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+    main h2 {
+        font-size: 2.5em;
+    }
+
+    .header-right ul li a {
+        font-size: 0.9em;
+    }
+
+    .content-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    header {
+        padding: 15px 30px;
+    }
+
+    .header-left h1 {
+        font-size: 1em;
+    }
+
+    .header-right ul {
+        gap: 15px;
+    }
+
+    .header-right ul li a {
+        font-size: 0.9em;
+    }
+
+    main h2 {
+        font-size: 3em;
+    }
+}
+
+/* Carousel Styling */
+.carousel {
+    position: relative;
+    width: 80%; /* Adjust as necessary */
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.carousel-slide {
+    min-width: 100%; /* Each slide takes full width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a slight shadow for depth */
+}
+
+.carousel-image {
+    width: 100%; /* Ensures the image fits its container */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-nav button {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.carousel-nav button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
+}
